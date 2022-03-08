@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="/static/styling.css">
+    <script src="/static/console.js"></script>
+</head>
+<body>
+
+    <div class="login" id="logi">
+        <li id="j"> <a href="" action ="">Login Now </a></li>
+        <form action="" id="for" name="myform" onsubmit="return validateForm()" method="post">
+           
+                <p> Username:</p>
+                <div id="email">
+                <input type="text" name="Emailid"  placeholder="Enter your Username "><b><span class="formerror"></span></b>
+                </div>
+                <p>Password:</p>
+                <div id="pass">
+                <input type="password" name="Password" id="pass" placeholder="Password"><b><span class="formerror"></span></b>
+            </div>
+                <p>Remember Me:</p>
+                <input type="checkbox" name="check" id="">
+                 
+                {% extends 'base.html' %}
+                {% block content %}
+                {% endblock content %}
+        </form>
+    </div>
+</body>
+</html>

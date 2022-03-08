@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ INSTITUTION</title>
+    <link rel="stylesheet" href="/static/styling.css"> 
+    <script src="/static/console.js"></script>
+</head>
+
+<body>
+    
+    
+    
+    <div class="navbar">
+        <div id="n">
+            <nav class="items"> <a href="#home">HOME</a> </nav>
+            <nav class="items"> <a href="#about">ABOUT US</a> </nav>
+            <nav class="items"> <a href="#contact">CONTACT US</a> </nav>
+        </div>
+        <div id="o">
+            <div id="s">
+        <nav> <a href="{% url 'logoutuser' %}" >Logout</a> </nav>
+    </div>
+    </div> 
+</div>
+<!-- <img src="/static/back.jpeg" alt=""> -->
+    <div class="content">
+        <h3>Aur bete kya chal raha hai !!!!!!!!</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem porro similique aspernatur, vitae
+            perferendis, animi deleniti voluptatem, veritatis quis nesciunt nihil! Ipsa nam quae placeat! Voluptatum,
+            quas. Maxime deleniti illum repellat dolorum provident iste, excepturi reprehenderit non nostrum accusamus.
+        </p>
+    </div>
+    <!-- <img src="/static/login.png" alt=""> -->
+
+    <div class="container">
+
+        <div class="log">
+            <p id="fo">Find in which department you want to login in</p>
+            <div id="my">
+            <div class="it">
+                <h3>Join us</h3>
+                <button><a href="{% url 'apply' %}" >Apply Now</a></a></button>
+            </div>
+            <div class="it">
+                <h3>Faculty Login</h3>
+                <button><a href="{% url 'facultylogin' %}" >Faculty login</a></a></button>
+            </div>
+        </div>
+    </div> 
+    
+
+
+   
+        
+
+    {% comment %} <div class="login" id="logi">
+        <li id="j"> <a href="" action ="">Login Now </a></li>
+        <form action="" id="for" name="myform" onsubmit="return validateForm()" method="post">
+           
+                <p> Username:</p>
+                <div id="email">
+                <input type="text" name="Emailid"  placeholder="Enter your email id "><b><span class="formerror"></span></b>
+                </div>
+                <p>Password:</p>
+                <div id="pass">
+                <input type="password" name="Password" id="pass" placeholder="Password"><b><span class="formerror"></span></b>
+            </div>
+                <p>Remember Me:</p>
+                <input type="checkbox" name="check" id="">
+                 
+            {% extends 'base.html' %}
+            {% block content %}
+            {% endblock content %}
+        </form>
+    </div> {% endcomment %}
+     
+</body>
+<script>
+</script>
+</html> 

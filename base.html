@@ -1,0 +1,11 @@
+{% csrf_token %}
+
+<form>
+    <li><button>Login</button><span><a href="{% url 'signup' %}"> Sign up</a></span></li> 
+</form>
+
+
+
+{% block content %}
+{% endblock  %}
+

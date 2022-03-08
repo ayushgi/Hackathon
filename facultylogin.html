@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login Page</title>
+    <link rel="stylesheet" href="/static/styling.css">
+</head>
+<body>
+    <div class="login" id="logi">
+        <li id="j"> <a href="" action ="">Login Now </a></li>
+        <form action="" id="for" name="myform" onsubmit="return validateForm()" method="post">
+            {% csrf_token %}
+           
+                <p> Username:</p>
+                <div id="email">
+                <input type="text" name="Emailid"  placeholder="Enter your username "><b><span class="formerror"></span></b>
+                </div>
+                <p>Password:</p>
+                <div id="pass">
+                <input type="password" name="Password" id="pass" placeholder="Password"><b><span class="formerror"></span></b>
+            </div>
+                <p>Remember Me:</p>
+                <input type="checkbox" name="check" id="">
+                 
+                <li><button>Login</button><span>
+        </form>
+    
+    </div>
+</body>
+<script>
+
+
+function seterror(id,error){
+    element = document.getElementById(id);
+    element.getElementsByClassName('formerror')[0].innerHTML = error;
+}
+
+
+
+function clearerror(){
+
+    error = document.getElementsByClassName('formerror');
+    for(let item of error){
+        item.innerHTML = ""
+    }
+}
+
+
+
+
+
+function validateForm(){
+    clearerror();
+    var returnval = true;
+    var email = document.forms['myform']["Emailid"].value;
+    if (email.length>10){
+        seterror('email' ,"*username is too big");
+        returnval = false;
+    }
+    if (email.length==0){
+        seterror('email' ,"*username cannot be Empty");
+        returnval = false;
+    }
+
+    var pass = document.forms['myform']["Password"].value;
+    if(pass.length<2){
+        seterror('pass',"*Password should be greater than seven digit");
+        returnval = false;
+    }
+    if(pass.length==0){
+        seterror('pass',"*Password can not be empty");
+        returnval = false;
+    }
+    
+
+
+
+
+
+    return returnval;
+}
+
+</script>
+</html>
